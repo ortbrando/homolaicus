@@ -1,0 +1,182 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="UserHomepage.master.cs" Inherits="Users_UserHomepage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Homolaicus</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="abstract" content="Sito culturale di Umanesimo laico e Socialismo democratico">
+    <meta name="keywords" content="socialismo democratico, socialismo scientifico, democrazia, umanesimo laico, ateismo scientifico, materialismo storico, materialismo dialettico, religioni, laicismo, laicita', laico, regime di separazione, separazione tra chiesa e stato, separazione tra chiesa e scuola, stato laico, liberta' di parola, liberta' di coscienza, diritti umani, diritti civili, umanesimo reale, umanesimo integrale, socialismo utopistico, democrazia reale, democrazia sostanziale, localismo, globalismo, federalismo, autonomia locale, autonomia regionale, autogestione, cooperazione">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/Affix.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/home.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/login.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="overflow-x: hidden;">
+    <form id="form1" runat="server">
+        <!-- NAVBAR -->
+        <div class="navbar navbar-default" style="border-color: transparent; background-color: #8a2323; background-size: cover; border-radius: 0px;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="~/HomePage.aspx">
+                        <img height="20" alt="Brand" src="../img/house-black-silhouette-without-door.png"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                    <ul class="nav navbar-nav navbar-right navbar">
+                        <li class="nav-item item">
+                            <asp:LinkButton runat="server" ID="LinkButton1" Text="Storia" Style="color: white;" OnClick="Item_Click"></asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton runat="server" ID="LinkButton2" Text="Economia" Style="color: white;" OnClick="Item_Click"></asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton runat="server" ID="LinkButton3" Text="Politica" Style="color: white;" OnClick="Item_Click"></asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton runat="server" ID="LinkButton4" Text="Linguaggi" Style="color: white;" OnClick="Item_Click"></asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton runat="server" ID="LinkButton5" Text="Letteratura" Style="color: white;" OnClick="Item_Click"></asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton runat="server" ID="LinkButton6" Text="Teoria" Style="color: white;" OnClick="Item_Click"></asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton runat="server" ID="LinkButton7" Text="Teorici" Style="color: white;" OnClick="Item_Click"></asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton runat="server" ID="LinkButton8" Text="Scienza" Style="color: white;" OnClick="Item_Click"></asp:LinkButton>
+                        </li>
+                        <li style="color: white;">
+                            <asp:LinkButton runat="server" ID="LinkButton9" Text="Diritto" Style="color: white;" OnClick="Item_Click"></asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton runat="server" ID="LinkButton10" Text="Arte" Style="color: white;" OnClick="Item_Click"></asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton runat="server" ID="LinkButton11" Text="Uomo / Donna" Style="color: white;" OnClick="Item_Click"></asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton runat="server" ID="LinkButton12" Text="Religioni" Style="color: white;" OnClick="Item_Click"></asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton runat="server" ID="LinkButton13" Text="Formazione" Style="color: white;" OnClick="Item_Click"></asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="btnAccedi" OnClick="btnAccedi_Click" runat="server" Text="Accedi" CssClass="accedi" ForeColor="White"></asp:LinkButton>
+                        </li>
+                        <li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <asp:Label ID="lblUser" Visible="false" runat="server" ForeColor="White"><span class="caret"></asp:Label></span></a>
+                            
+                            <ul class="dropdown-menu">
+                                <li><asp:LinkButton runat="server" ID="btnEditor" OnClick="btnEditor_Click" Visible="false">Editor</asp:LinkButton></li>
+                                <li><asp:LinkButton runat="server" ID="btnGestione" OnClick="btnGestione_Click" Visible="false">Gestione</asp:LinkButton></li>
+                                <!--<li role="separator" class="divider"></li>-->
+                                <li><asp:LinkButton runat="server" ID="btnLogout" OnClick="btnLogout_Click" Visible="false">Logout</asp:LinkButton></li>
+                            </ul>
+                            </li>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron" style="background: no-repeat; background-image: url('../img/o-BOOKS-facebook chiarosfondo.jpg'); background-position: top;">
+            <div class="container" style="color: white; padding-top: 0px;">
+                <div class="col-md-2 hidden-xs"></div>
+                <div class="col-lg-8 col-md-8 col-sm-10 col-xs-12 center-block">
+                    <img src="../img/LogoHomolaicusg.png" class="img-responsive center"/>
+                </div>
+            </div>
+            <div class="col-md-2 hidden-xs" ></div>
+        </div>
+
+        <asp:ContentPlaceHolder ID="HomePage" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="Storia" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="Categoria" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="Argomento" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="Cookies" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="Libri" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="Ricerca" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="RicercaArticoli" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="RicercheBibliografiche" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="Registrazione" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="Conferma" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="Accedi" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="Editor" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="Gestione" runat="server"></asp:ContentPlaceHolder>
+
+        <!-- FOOTER -->
+
+        <footer class="section section-primary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-md-4"><a href="#">
+                        <img src="../img/LogoHomolaicussolo.png" class="img-responsive"></a>
+                        <p contenteditable="true">
+                            <br>
+                            <br>
+                            &nbsp; &nbsp; &nbsp; Per l'Umanesimo Laico e il Socialismo Democratico</p>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-sm-3 col-md-3">
+                        <ul>
+                            <li>Contatti</li>
+                            <li>Info</li>
+                            <li>I libri di Homolaicus</li>
+                            <li>Ricerca</li>
+                            <li>Donazione</li>
+                            <li>Utility</li>
+                        </ul>
+                        <p class="text-info text-right">
+                            <br>
+                            <br>
+                        </p>
+                        <div class="row">
+                            <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+                                 <a href="https://www.facebook.com/enrico.galavotti?fref=ts"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                                <a href="https://twitter.com/galarico"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-google-plus text-inverse"></i></a>
+                                <a href="https://www.youtube.com/user/galarico"><i class="fa fa-3x fa-fw fa-youtube-play text-inverse"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-md-4">
+                       
+                        <div class="row">
+                            <div class="col-md-12 hidden-xs">
+                                <a href="https://www.facebook.com/enrico.galavotti?fref=ts"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                                <a href="https://twitter.com/galarico"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                                <a href="https://plus.google.com/+EnricoGalavotti"><i class="fa fa-3x fa-google-plus text-inverse"></i></a>
+                                <a href="https://www.youtube.com/user/galarico"><i class="fa fa-3x fa-fw fa-youtube-play text-inverse"></i></a></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+</form>
+    <script src="js/cookiechoices.js"></script>
+    <script>//<![CDATA[
+        document.addEventListener('DOMContentLoaded', function (event) {
+            cookieChoices.showCookieConsentBar('Questo sito utilizza cookies tecnici, analytics e di profilazione, anche di terze parti, per inviarti pubblicità e servizi in linea con le tue preferenza. Per avere maggiori informazioni o per negare il consenso a tutti o alcuni cookie clicca su Ulteriori Informazioni in ogni caso continuando la navigazione acconsenti ad utilizzare i cookies.',
+                'Ok', 'Maggiori Informazioni',
+                         'Cookies.aspx');
+        });
+        //]]></script>
+</body>
+</html>
